@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Shubho</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<link rel="stylesheet" href="css/aos.css">
+
+	<link rel="stylesheet" href="css/ionicons.min.css">
+
+	<link rel="stylesheet" href="css/flaticon.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/style.css">
+
+
+
+	<style>
+		/*======================================
+//--//-->   ABOUT
+======================================*/
+
+		.about-mf .box-shadow-full {
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+		}
+
+		.about-mf .about-img {
+			margin-bottom: 2rem;
+		}
+
+		.about-mf .about-img img {
+			margin-left: 10px;
+		}
+
+
+		.skill-mf .progress {
+			/* background-color: #cde1f8; */
+			margin: .5rem 0 1.2rem 0;
+			border-radius: 0;
+			height: .7rem;
+		}
+
+		.skill-mf .progress .progress-bar {
+			height: .7rem;
+			background-color: #0d6efd;
+		}
+
+
+		/* Animation styles */
+		#typing-animation {
+			position: relative;
+			font-size: 30px;
+			font-weight: bold;
+			color: rgb(255, 255, 255);
+			overflow: hidden;
+			white-space: nowrap;
+			animation: typing 3s steps(20, end) infinite;
+		}
+
+		#typing-animation:before {
+			content: "";
+			/* position: absolute; */
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 100%;
+			background-color: #ccc;
+			animation: typing-cursor 0.5s ease-in-out infinite;
+		}
+
+		@keyframes typing {
+			from {
+				width: 0;
+			}
+
+			to {
+				width: 100%;
+			}
+		}
+
+		@keyframes typing-cursor {
+			from {
+				width: 5px;
+			}
+
+			to {
+				width: 0;
+			}
+		}
+
+
+		/* project image zoom effect */
+
+		.zoom-effect {
+			overflow: hidden;
+			transition: transform 0.3s ease-out;
+		}
+
+		.zoom-effect:hover {
+			transform: scale(1.1);
+		}
+	</style>
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">Shubho Chakraborty</a>
+			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+				data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav nav ml-auto">
+					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+					<li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section id="home-section" class="hero">
+		<div class="home-slider  owl-carousel">
+			<div class="slider-item ">
+				<div class="container">
+					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
+						data-scrollax-parent="true">
+						<div class="col-md-6">
+							<div class="blob"></div>
+						</div>
+						<div class="one-forth d-flex  align-items-center ftco-animate"
+							data-scrollax=" properties: { translateY: '70%' }">
+							<div class="text">
+								<span class="subheading">Hello!</span>
+								<h1 class="mb-4 mt-3">I'm <span style="color: #0d6efd;">Shubho Chakraborty</span></h1>
+
+								<span id="typing-animation"></span>
+
+								<script>
+
+									// Initialize the typing animation
+									const typingAnimationElement = document.getElementById('typing-animation');
+
+									// Create an array of typing text
+									const typingTexts = [
+										'Eat();   ',
+										'Sleep(); ',
+										'<Code/>  ',
+										'Repeat();',
+									];
+
+									// Create a function to display the typing animation for a given text
+									function playTypingAnimation(text) {
+										// Loop through each character and add it to the element
+										for (let i = 0; i < text.length; i++) {
+											setTimeout(() => {
+												typingAnimationElement.textContent += text[i];
+											}, i * 100); // Increase the delay to slow down the typing animation
+										}
+
+										// Once the animation is complete, reset the text and start over
+										setTimeout(() => {
+											typingAnimationElement.textContent = '';
+											playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+										}, text.length * 100);
+									}
+
+									// Start the typing animation loop
+									playTypingAnimation(typingTexts[0]);
+
+								</script>
+
+								<br>
+								<br>
+								<h2>A Software Developer</h2>
+								<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+								<!-- <br> -->
+								<p>
+									<!-- <a href="https://www.youtube.com/@RishabhMishraOfficial"
+										class="btn btn-primary py-3 px-4">YouTube</a> -->
+									<a href="https://github.com/ShubhoCH?tab=repositories"
+										class="btn btn-outline-white py-3 px-4" style='border-color: white !important'>My works</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+		<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+					<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+										<div class="about-img">
+											<img src="images/me_profile.png" class="img-fluid rounded b-shadow-a"
+												alt="">
+										</div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+										<div class="about-info">
+											<p><span class="title-s">Name: </span> <span>Shubho Chakraborty</span></p>
+											<p><span class="title-s">Job Role: </span> <span>Software Developer</span>
+											</p>
+											<p><span class="title-s">Experience: </span> <span>2 Years</span></p>
+											<p><span class="title-s">Address: </span> <span>Bengaluru, India</span></p>
+										</div>
+									</div>
+								</div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>JavaScript</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;"
+											aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>Python</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%"
+											aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>C++</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%"
+											aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>NodeJS</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%"
+											aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>Java</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%"
+											aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>SpringBoot</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%"
+											aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>Flutter</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%"
+											aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>ReactJS</span> <span class="pull-right">60%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 70%"
+											aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								<p>
+									I am a Software Developer with extensive experience at dynamic startups such as
+									ElectricPe (EV-Charging and Aggregator Platform),
+									Shipsy (Logistics Platform), PhonePe (WealthDesk), and CityMall (E-Commerce).
+									This journey has equipped me with the expertise to craft scalable and efficient
+									software solutions
+									tailored to the distinctive requirements of each organisation. Directly engaging
+									with product
+									development has instilled in me a sense of ownership and accountability for my work.
+									I am certain that my ability to thrive under pressure and consistently deliver
+									high-quality
+									results aligns seamlessly with the expectations of your team.
+								</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Languages:</span> <span>JavaScript, Python, C++, Java,
+											Kotlin, Dart, SQL, RDBMS, Postgres, MongoDB, DynamoDB</span></li>
+									<li class="d-flex"><span>Frameworks</span> <span>Node.js, React.js, Spring Boot,
+											Flutter, Loopback</span></li>
+									<li class="d-flex"><span>Developer Tools:</span> <span>Amazon Web Services(AWS),
+											Pub-Sub, Git, Grafana, GCP, Metabase, OpenSearch</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Traveling, Adventure Sports &
+											Healthy Lifestyle</span></li>
+								</ul>
+							</div>
+						</div>
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="30">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/shubhoch/"
+										class="btn btn-primary py-3 px-6">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="ftco-section ftco-no-pb" id="resume-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Resume</h1>
+					<h2 class="mb-4">Resume</h2>
+					<p>A seasoned Software Developer with approximately 2 years of hands-on experience,
+						specializing in Backend development while also proficient in Frontend technologies.</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<h1 class="big-4">Experience</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">05/2023 - Present</span>
+						<h2>Software Developer</h2>
+						<span class="position">ElectricPe</span>
+						<div class="scrollable">
+							<p class="mt-4">
+								India's leading Electric Mobility Platform! Launched in May 2021, ElectricPe offers
+								products and services
+								to deliver a holistic electric vehicle (EV) experience.
+							<ul>
+								<li>Lead Developer for CMS(Charger Management System) and Robin(On Ground Staff Task
+									Delegation) app at ElectricPe</li>
+								<li>Achieved a Milestone of 10000 Users from 1000, generating 10-15 lakhs as monthly
+									payout within 6 months</li>
+								<li>Developed In-App flow to check daily earnings, settlements and raise Payout request
+									all from the CMS app</li>
+								<li>Station level Insights for CPO’s for better visibility of Booking, Earnings, Users,
+									Energy-Consumption and overall Analytics for both daily and ranged intervals</li>
+								<li>Developed an NPS module managing 1000000+ monthly user feedback across all
+									ElectricPe products Implemented system-wide monitoring by introducing a custom
+									runtime annotation for identification, facilitating alerts in the event of a missed
+									execution in cron jobs</li>
+								<li>Lead Migration of publisher subscriber model for all the services from SNS-SQS (AWS)
+									to Pub-Sub (GCP)</li>
+								<li>End-to-end development of the Robin App, that helps in overseeing and tracking
+									on-ground Agent</li>
+								<li>Life-cycle creation, management, analysis features for new Leads, Test-rides, and
+									Activities</li>
+								<li>Designed and implemented an intuitive Admin dashboard for the in-office Management
+									team, streamlining task assignments, reassignments, and real-time tracking of
+									on-ground activities by agents</li>
+								<li>Developed a comprehensive Analytics module, tracking agent-specific daily action
+									logs, including check-ins, check-outs, battery percentages, locations, and asset
+									details</li>
+								<li>Introduced a team-level hierarchy and group creation feature using Tree Data
+									Structures for efficientperformance evaluation and organisation of team actions</li>
+							</ul>
+							</p>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">08/2022 - 05/2023</span>
+						<h2>Software Developer</h2>
+						<span class="position">Shipsy</span>
+						<div class="scrollable">
+							<p class="mt-4">
+								A smart logistics management platform enabling businesses to significantly reduce
+								transportation costs, lower carbon footprint, enhance customer experiences, boost
+								delivery productivity, and drive seamless cross-border freight movement.
+							<ul>
+								<li>Developed an entire Exception module to handle unusual cases such as misrouted,
+									lost, damaged, and more in between consignment journeys</li>
+								<li>Build Reliance specific Vehicle Attendance module for daily vehicle tracking</li>
+								<li>Cash approval mechanism for the hub manager to verify rider transactions</li>
+								<li>Handled Dev and On-Call responsibility for some of the biggest names in the industry
+									like Reliance, DTDC, Zepto, Meesho, Zajil, GMG Group, etc.</li>
+								<li>Weight and Volumetric Weight support while in-scanning consignment during trip
+									loading to increase the Create Trip API success rate to over 80% from 25%.</li>
+							</ul>
+							</p>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">05/2022-08/2022</span>
+						<h2>Software Developer Intern</h2>
+						<span class="position">PhonePe (WealthDesk)</span>
+						<div class="scrollable">
+							<p class="mt-4">
+								PhonePe is an Indian Multinational digital payments and financial services company that
+								allows you to make instant Money Transfers with UPI.
+							<ul>
+								<li>Developed Lambda functions for fetching RealTime(BSE/NSE) Stock Prices for the
+									internal services</li>
+								<li>Wrote Lambda functions for Segregating different stocks listed in NSE/BSE into
+									different Industrial sectors</li>
+								<li>Wrote a Cron Job that is supposed to run every week to detect and mark Stocks as
+									Inactive for the end user for all such stocks that have been de-listed/removed from
+									NSE/BSE</li>
+							</ul>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2018-2021</span>
+						<h2>Software Developer Intern</h2>
+						<span class="position">CityMall</span>
+						<div class="scrollable">
+							<p class="mt-4">
+								An e-commerce platform focused on 500 million new to internet users living in small
+								cities, towns, and villages in India. CityMall is a highly efficient channel to serve
+								these consumers through "Community Leaders".
+							<ul>
+								<li>Wrote Scrapping Scripts for collecting details of more than 50000+ products listed
+									on Meesho, Jiomart etc</li>
+								<li>Send Daily media messages to 100000+ specifically targeted user’s containing media
+									of type Image, Video and Document via WhatsApp using KARIX</li>
+								<li>Developed Admin Portal Dashboard using AG-Grid in React for analysis of messages
+									send daily to users</li>
+								<li>Build an entire micro-service to keep track of Price fluctuations among competators
+									for the Analytics team</li>
+								<li>Scheduled automation for dispatching highly targeted daily whatsApp messages to over
+									100,000 users</li>
+							</ul>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<br>
+			<div class="row">
+				<h1 class="big-4">Education</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2018-2022</span>
+						<h2>Bachelor of Engineering</h2>
+						<span class="position">Heritage Institute Of Technology, Kolkata</span>
+						<p class="mt-4">Grade: First class distinction.</p>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2015-2017</span>
+						<h2>Higher Secondary School</h2>
+						<span class="position">DAV Public School, Koyla-Nagar</span>
+						<p class="mt-4">Grade: First class distinction.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row justify-content-center mt-5">
+				<div class="col-md-6 text-center ftco-animate">
+					<p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="ftco-section" id="project-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-5">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Projects</h1>
+					<h2 class="mb-4">Projects</h2>
+					<p>Below are the list of Project to showcase my work:</p>
+				</div>
+			</div>
+			<div class="row d-flex">
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/ShubhoCH/Microservice" class="block-20 zoom-effect"
+							style="background-image: url('images/micro-service.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading">
+								<a href="https://github.com/ShubhoCH/Microservice">
+									Story Book
+								</a>
+							</h3>
+							<p>A microservices architecture for a dynamic website that offers users the ability to
+								effortlessly login or sign up. Additionally, it will feature functionalities enabling
+								users to read captivating stories, share their own posts, and engage with others'
+								stories through reactions.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/ShubhoCH/Todo-Website" class="block-20 zoom-effect"
+							style="background-image: url('images/task_manager.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading">
+								<a href="https://github.com/ShubhoCH/Todo-Website">
+									Task Manager
+								</a>
+							</h3>
+							<p>A task manager website offers users a digital platform to organize tasks, assign
+								responsibilities, set deadlines, and track progress efficiently. It simplifies task
+								management processes, fosters collaboration, and enhances productivity for individuals
+								and teams.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/ShubhoCH/Image-Editor" class="block-20 zoom-effect"
+							style="background-image: url('images/image_editor.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading">
+								<a href="https://github.com/ShubhoCH/Image-Editor">
+									Image Editing Software
+								</a>
+							</h3>
+							<p>An image editing software built with OpenCV and Tkinter offers users intuitive image
+								processing tools within a user-friendly interface, facilitating tasks such as filtering,
+								cropping, and color adjustments efficiently.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<!-- added justify-content-center to center align the last two projects -->
+			<!-- <div class="row d-flex justify-content-center">
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main"
+							class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/rishabhnmishra/sales_forecasting/tree/main">Sales Forecast-
+									Time Series Forecasting</a></h3>
+							<p>Used multiple machine learning models to forecast sales (retail store) and performed time
+								series analysis.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb"
+							class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb">Customer
+									Segmentation using clustering model</a></h3>
+							<p>Developed a ML model to give various recommendations of financial products &amp; services
+								on target customer groups.</p>
+						</div>
+					</div>
+				</div>
+			</div> -->
+		</div>
+	</section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+		<div class="container">
+			<div class="row d-md-flex align-items-center">
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="15">0</strong>
+							<span>Achievements</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="40">0</strong>
+							<span>Projects</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="999">0</strong>
+							<span>Cups of coffee</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/me_Bg_1.jpeg)">
+			<!-- <div class="container"> -->
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>More projects on<span> Github </span> </h2>
+					<div class="heading">
+						<h4> I'm passionate about tackling intricate business challenges and crafting robust systems
+							capable of seamlessly managing your scalability requirements. </h4>
+						<br>
+						<p><a href="https://github.com/shubhoch" class="btn my-btn-primary py-3 px-5" style='border-color: white !important'}>GitHub</a></p>
+					</div>
+				</div>
+			</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Contact</h1>
+					<h2 class="mb-4">Contact Me</h2>
+					<p>Below are the details to reach out to me!</p>
+				</div>
+			</div>
+
+			<div class="row d-flex contact-info mb-5">
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-map-signs"></span>
+						</div>
+						<h3 class="mb-4">Address</h3>
+						<p>Bengaluru, India</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-phone2"></span>
+						</div>
+						<h3 class="mb-4">Contact Number</h3>
+						<p><a href="tel://0101010101">+91-8757014613</a></p>
+					</div>
+				</div>
+				<div class="col-md-5 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-paper-plane"></span>
+						</div>
+						<h3 class="mb-4">Email Address</h3>
+						<p><a href="mailto:shubho1chakraborty1@gmail.com">shubho1chakraborty1@gmail.com</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-globe"></span>
+						</div>
+						<h3 class="mb-4">Download Resume</h3>
+						<p><a href="#">resumelink</a></p>
+					</div>
+				</div>
+
+				<div class="container">
+					<br>
+					<br>
+					<div class="row justify-content-center">
+						<div class="col-md-7 ftco-animate text-center">
+							<h2>Have a<span> Question? </span> <a href="https://forms.gle/uLaTShUKXraAvHJ77"
+									class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+						</div>
+					</div>
+					<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+						<li class="ftco-animate normal-txt">Find me on </li>
+						<!-- <li class="ftco-animate"><a href="https://www.youtube.com/@RishabhMishraOfficial"><span
+									class="icon-youtube"></span></a></li> -->
+						<li class="ftco-animate"><a href="https://www.linkedin.com/in/shubhoch/"><span
+									class="icon-linkedin"></span></a></li>
+						<!-- <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span
+									class="icon-twitter"></span></a></li> -->
+						<!-- <li class="ftco-animate"><a href="https://twitter.com/rishabhnmishra"><span
+									class="icon-facebook"></span></a></li> -->
+						<!-- <li class="ftco-animate"><a href="https://www.instagram.com/rishabhnmishra/"><span
+									class="icon-instagram"></span></a></li> -->
+					</ul>
+					<br>
+				</div>
+			</div>
+	</section>
+
+	<footer class="ftco-footer ftco-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<p>
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						Copyright &copy;
+						<script>document.write(new Date().getFullYear());</script>
+						</a>
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script src="js/scrollax.min.js"></script>
+
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
